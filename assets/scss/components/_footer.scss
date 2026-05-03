@@ -4,8 +4,8 @@
    width: 100%;
    margin-top: 2.5rem;
    padding: 3rem 0 2rem;
-   background-color: #fe0353;
-   color: #fff;
+   background-color: #faaf41;
+   color: #000;
 
    &__content{
       display: grid;
@@ -26,17 +26,17 @@
       line-height: 1.7;
 
       a{
-         color: var(--white-color);
+         color: #000;
 
          &:hover{
-            color: var(--white-color);
+            color: #000;
             opacity: .85;
          }
       }
    }
 
    &__link{
-      color: var(--white-color);
+      color: #000;
    }
 
    &__social{
@@ -47,7 +47,7 @@
    }
 
    &__social-link{
-      color: var(--white-color);
+      color: #000;
       font-size: 1.5rem;
       transition: transform .2s ease, opacity .2s ease;
 
