@@ -37,6 +37,12 @@
          font-weight: initial;
          font-size: 1.25rem;
       }
+      & img{
+         height: 2.75rem;
+         width: auto;
+         display: block;
+         filter: brightness(0.75);
+      }
    }
    &__toggle{
       position: relative;

@@ -764,6 +764,13 @@ a {
   font-size: 1.25rem;
 }
 
+.nav__logo img {
+  height: 2.75rem;
+  width: auto;
+  display: block;
+  filter: brightness(0.90);
+}
+
 .nav__toggle {
   position: relative;
   width: 32px;
