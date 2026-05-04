@@ -137,7 +137,7 @@ a {
   transform: translateY(-50%);
   font-size: 1.3rem;
   line-height: 1;
-  color: #faaf41;
+  color: #41fa8e;
   transition: transform .2s ease;
 }
 
@@ -181,7 +181,7 @@ a {
 }
 
 .team-qa__details dd a {
-  color: #faaf41;
+  color: #41fa8e;
 }
 
 .team-qa__details dd a:hover {
@@ -201,7 +201,7 @@ a {
 
 .beirat-quote {
   margin-top: 1rem;
-  border-left: 4px solid #faaf41;
+  border-left: 4px solid #41fa8e;
   padding: .5rem 0 .5rem 1rem;
   line-height: 1.7;
   color: var(--black-color-lighten);
@@ -396,7 +396,7 @@ a {
 }
 
 .herventure__list a {
-  color: #faaf41;
+  color: #41fa8e;
 }
 
 .herventure__list a:hover {
@@ -429,7 +429,7 @@ a {
 }
 
 .inkubator__cta a {
-  color: #faaf41;
+  color: #41fa8e;
   font-weight: var(--font-semi-bold);
 }
 
@@ -540,7 +540,7 @@ a {
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #faaf41;
+  color: #41fa8e;
   font-size: 1.3rem;
   line-height: 1;
   transition: transform .2s ease;
@@ -619,7 +619,7 @@ a {
   width: 100%;
   border: none;
   border-radius: 8px;
-  background-color: #faaf41;
+  background-color: #41fa8e;
   color: #fff;
   font-family: var(--body-font);
   font-size: .95rem;
@@ -661,7 +661,7 @@ a {
 }
 
 .startups__list a {
-  color: #faaf41;
+  color: #41fa8e;
 }
 
 .startups__list a:hover {
@@ -727,7 +727,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #faaf41;
+  background-color: #41fa8e;
   z-index: var(--z-fixed);
   color: #000;
 }
@@ -811,14 +811,14 @@ a {
     width: 0;
   }
   .nav__list {
-    background-color: #faaf41;
+    background-color: #41fa8e;
     padding-top: 1rem;
   }
 }
 
 .nav__link {
   color: #000;
-  background-color: #faaf41;
+  background-color: #41fa8e;
   font-weight: var(--font-semi-bold);
   padding: 1.25rem 1.5rem;
   display: flex;
@@ -828,7 +828,7 @@ a {
 }
 
 .nav__link:hover {
-  background-color: #faaf41;
+  background-color: #41fa8e;
 }
 
 /* Show menu */
@@ -863,7 +863,7 @@ a {
 .dropdown__sublink {
   padding: 1.25rem 1.25rem 1.25rem 2.5rem;
   color: #000;
-  background-color: #faaf41;
+  background-color: #41fa8e;
   display: flex;
   align-items: center;
   column-gap: .5rem;
@@ -879,7 +879,7 @@ a {
 
 .dropdown__link:hover, 
 .dropdown__sublink:hover {
-  background-color: #faaf41;
+  background-color: #41fa8e;
 }
 
 .dropdown__menu, 
@@ -909,7 +909,7 @@ a {
 }
 
 .dropdown__sublink {
-  background-color: #faaf41;
+  background-color: #41fa8e;
 }
 
 .dropdown__subitem:hover > .dropdown__link .dropdown__add {
@@ -966,7 +966,7 @@ a {
 }
 
 .home__intro a {
-  color: #faaf41;
+  color: #41fa8e;
   font-weight: 600;
 }
 
@@ -991,7 +991,7 @@ a {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
-  color: #faaf41;
+  color: #41fa8e;
 }
 
 .home__card-text {
@@ -1039,7 +1039,7 @@ a {
   width: 100%;
   margin-top: 2.5rem;
   padding: 3rem 0 2rem;
-  background-color: #faaf41;
+  background-color: #41fa8e;
   color: #000;
 }
 
@@ -1055,6 +1055,7 @@ a {
 
 .footer__hours {
   display: flex;
+  flex-wrap: nowrap;
   gap: 1.5rem;
 }
 
@@ -1062,6 +1063,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 0;
+  white-space: nowrap;
 }
 
 .footer__hours-col .footer__text {
