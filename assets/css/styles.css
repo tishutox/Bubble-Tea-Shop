@@ -750,6 +750,31 @@ a {
   align-items: center;
 }
 
+.nav__actions {
+  display: flex;
+  align-items: center;
+  column-gap: .35rem;
+}
+
+.nav__theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  padding: .2rem .3rem;
+  border-radius: .35rem;
+  transition: transform .35s ease, background-color .2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav__theme-toggle:hover {
+  background-color: rgba(0, 0, 0, .08);
+  transform: rotate(18deg);
+}
+
 .nav__logo {
   display: inline-flex;
   align-items: center;
@@ -1569,6 +1594,51 @@ a {
   .contact-gallery__img {
     height: 210px;
   }
+}
+
+/*=============== DARK MODE ===============*/
+body.dark-mode {
+  --body-color: hsl(220, 20%, 10%);
+  --black-color: hsl(220, 15%, 88%);
+  --black-color-light: hsl(220, 15%, 70%);
+  --black-color-lighten: hsl(220, 15%, 55%);
+}
+
+.dark-mode .review-card {
+  background-color: hsl(220, 20%, 14%);
+  border-color: hsl(220, 15%, 22%);
+}
+
+.dark-mode .menu-item {
+  background-color: hsl(220, 20%, 14%);
+  border-color: hsl(220, 15%, 22%);
+}
+
+.dark-mode .menu-item__body {
+  border-top-color: hsl(220, 15%, 20%);
+}
+
+.dark-mode .about-story__image {
+  border-color: hsl(220, 15%, 22%);
+}
+
+.dark-mode .contact-map {
+  background-color: hsl(220, 20%, 13%);
+}
+
+.dark-mode .form__input,
+.dark-mode .form__select,
+.dark-mode .form__textarea {
+  border-color: hsl(220, 15%, 25%);
+}
+
+.dark-mode .form__captcha-canvas {
+  border-color: hsl(220, 15%, 25%);
+}
+
+.dark-mode .form__input::placeholder,
+.dark-mode .form__textarea::placeholder {
+  color: hsl(220, 10%, 45%);
 }
 
 /*=============== FOOTER ===============*/
