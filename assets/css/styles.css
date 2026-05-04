@@ -1180,8 +1180,8 @@ a {
   margin-top: 1rem;
   overflow: hidden;
   border-radius: 16px;
-  border: 1px solid hsl(220, 15%, 85%);
-  background: linear-gradient(130deg, hsl(0, 0%, 100%), hsl(120, 38%, 97%));
+  border: none;
+  background: var(--body-color);
 }
 
 .reviews__track {
