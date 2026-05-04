@@ -72,6 +72,16 @@ closeMenuAfterLinkTap()
 /*=============== REVIEW CARDS ===============*/
 const enhanceReviewCards = () => {
     const reviewCards = document.querySelectorAll('.review-card')
+    const avatarByName = {
+        'Gojo Satoru': 'assets/img/Gojo.png',
+        'Deadpool': 'assets/img/Deadpool.png',
+        'Asriel Dreemurr': 'assets/img/Asriel.png',
+        'Harley Quinn': 'assets/img/Harley.png',
+        'Papaplatte': 'assets/img/Papaplatte.png',
+        'Kylo The Doge': 'assets/img/Kylo.png',
+        'Gronkh': 'assets/img/Gronkh.png',
+        'Deku': 'assets/img/Deku.png'
+    }
     const starVariants = [
         { value: '5', icons: ['ri-star-fill', 'ri-star-fill', 'ri-star-fill', 'ri-star-fill', 'ri-star-fill'] },
         { value: '4.5', icons: ['ri-star-fill', 'ri-star-fill', 'ri-star-fill', 'ri-star-fill', 'ri-star-half-line'] },
@@ -90,8 +100,9 @@ const enhanceReviewCards = () => {
 
         const avatar = document.createElement('img')
         avatar.className = 'review-card__avatar'
-        avatar.src = `https://i.pravatar.cc/96?img=${(index % 60) + 1}`
-        avatar.alt = `Profilbild von ${nameEl.textContent.trim()}`
+        const reviewerName = nameEl.textContent.trim()
+        avatar.src = avatarByName[reviewerName] || 'assets/img/logo.png'
+        avatar.alt = `Profilbild von ${reviewerName}`
         avatar.loading = 'lazy'
         avatar.decoding = 'async'
 
