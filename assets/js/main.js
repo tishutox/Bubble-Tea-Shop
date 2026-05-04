@@ -73,14 +73,19 @@ closeMenuAfterLinkTap()
 const enhanceReviewCards = () => {
     const reviewCards = document.querySelectorAll('.review-card')
     const avatarByName = {
-        'Gojo Satoru': 'assets/img/Gojo.png',
-        'Deadpool': 'assets/img/Deadpool.png',
-        'Asriel Dreemurr': 'assets/img/Asriel.png',
-        'Harley Quinn': 'assets/img/Harley.png',
-        'Papaplatte': 'assets/img/Papaplatte.png',
-        'Kylo The Doge': 'assets/img/Kylo.png',
-        'Gronkh': 'assets/img/Gronkh.png',
-        'Deku': 'assets/img/Deku.png'
+        'gojo satoru': 'assets/img/Gojo.png',
+        'wade winston wilson': 'assets/img/Deadpool.png',
+        'deadpool': 'assets/img/Deadpool.png',
+        'asriel dreemurr': 'assets/img/Asriel.png',
+        'harleen quinzel': 'assets/img/Harley.png',
+        'harley quinn': 'assets/img/Harley.png',
+        'kevin teller': 'assets/img/Papaplatte.png',
+        'papaplatte': 'assets/img/Papaplatte.png',
+        'kylo the doge': 'assets/img/Kylo.png',
+        'erik range': 'assets/img/Gronkh.png',
+        'gronkh': 'assets/img/Gronkh.png',
+        'midoriya izuku': 'assets/img/Deku.png',
+        'deku': 'assets/img/Deku.png'
     }
     const starVariants = [
         { value: '5', icons: ['ri-star-fill', 'ri-star-fill', 'ri-star-fill', 'ri-star-fill', 'ri-star-fill'] },
@@ -101,7 +106,8 @@ const enhanceReviewCards = () => {
         const avatar = document.createElement('img')
         avatar.className = 'review-card__avatar'
         const reviewerName = nameEl.textContent.trim()
-        avatar.src = avatarByName[reviewerName] || 'assets/img/logo.png'
+        const normalizedName = reviewerName.toLowerCase()
+        avatar.src = avatarByName[normalizedName] || 'assets/img/logo.png'
         avatar.alt = `Profilbild von ${reviewerName}`
         avatar.loading = 'lazy'
         avatar.decoding = 'async'
