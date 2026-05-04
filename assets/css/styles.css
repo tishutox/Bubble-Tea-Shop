@@ -1189,7 +1189,12 @@ a {
   width: max-content;
   gap: .85rem;
   padding: .95rem;
-  animation: reviews-marquee 24s linear infinite;
+  animation: reviews-marquee 38s linear infinite;
+}
+
+.reviews__slider:hover .reviews__track,
+.reviews__slider:focus-within .reviews__track {
+  animation-play-state: paused;
 }
 
 .reviews__slider--ltr .reviews__track {
@@ -1204,8 +1209,31 @@ a {
   padding: .9rem;
 }
 
+.review-card__header {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+}
+
+.review-card__avatar {
+  width: 48px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #41fa8e;
+  flex-shrink: 0;
+}
+
 .review-card__name {
   color: var(--black-color);
+}
+
+.review-card__rating {
+  margin-top: .2rem;
+  color: #41fa8e;
+  display: inline-flex;
+  gap: .15rem;
+  font-size: .9rem;
 }
 
 .review-card__message {

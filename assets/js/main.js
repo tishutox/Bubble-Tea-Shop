@@ -68,3 +68,52 @@ const enableMobileDropdowns = () => {
 
 enableMobileDropdowns()
 closeMenuAfterLinkTap()
+
+/*=============== REVIEW CARDS ===============*/
+const enhanceReviewCards = () => {
+    const reviewCards = document.querySelectorAll('.review-card')
+    const starVariants = [
+        { value: '5', icons: ['ri-star-fill', 'ri-star-fill', 'ri-star-fill', 'ri-star-fill', 'ri-star-fill'] },
+        { value: '4.5', icons: ['ri-star-fill', 'ri-star-fill', 'ri-star-fill', 'ri-star-fill', 'ri-star-half-line'] },
+        { value: '4', icons: ['ri-star-fill', 'ri-star-fill', 'ri-star-fill', 'ri-star-fill', 'ri-star-line'] },
+        { value: '3.5', icons: ['ri-star-fill', 'ri-star-fill', 'ri-star-fill', 'ri-star-half-line', 'ri-star-line'] }
+    ]
+
+    reviewCards.forEach((card, index) => {
+        if(card.querySelector('.review-card__header')) return
+
+        const nameEl = card.querySelector('.review-card__name')
+        if(!nameEl) return
+
+        const header = document.createElement('div')
+        header.className = 'review-card__header'
+
+        const avatar = document.createElement('img')
+        avatar.className = 'review-card__avatar'
+        avatar.src = `https://i.pravatar.cc/96?img=${(index % 60) + 1}`
+        avatar.alt = `Profilbild von ${nameEl.textContent.trim()}`
+        avatar.loading = 'lazy'
+        avatar.decoding = 'async'
+
+        const info = document.createElement('div')
+        const rating = document.createElement('div')
+        const variant = starVariants[index % starVariants.length]
+        rating.className = 'review-card__rating'
+        rating.setAttribute('aria-label', `${variant.value} von 5 Sternen`)
+
+        variant.icons.forEach((iconClass) => {
+            const star = document.createElement('i')
+            star.className = iconClass
+            star.setAttribute('aria-hidden', 'true')
+            rating.appendChild(star)
+        })
+
+        nameEl.parentNode.insertBefore(header, nameEl)
+        info.appendChild(nameEl)
+        info.appendChild(rating)
+        header.appendChild(avatar)
+        header.appendChild(info)
+    })
+}
+
+enhanceReviewCards()
