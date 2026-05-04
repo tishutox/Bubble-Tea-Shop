@@ -1759,6 +1759,12 @@ body.dark-mode {
   font-size: .8rem;
 }
 
+@media screen and (min-width: 1118px) {
+  .footer__legal {
+    justify-content: center;
+  }
+}
+
 .footer__legal-btn {
   background: none;
   border: none;
