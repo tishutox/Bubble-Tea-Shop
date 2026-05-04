@@ -1061,6 +1061,7 @@ a {
 .menu-category__items {
   margin-top: 1rem;
   display: grid;
+  align-items: start;
   gap: .75rem;
 }
 
@@ -1069,6 +1070,7 @@ a {
   border-radius: 12px;
   background-color: #fff;
   overflow: hidden;
+  align-self: start;
 }
 
 .menu-item__summary {
@@ -1129,7 +1131,16 @@ a {
 
 @media screen and (min-width: 768px) {
   .menu-category__items {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: block;
+    column-count: 2;
+    column-gap: .75rem;
+  }
+
+  .menu-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: .75rem;
+    break-inside: avoid;
   }
 }
 
