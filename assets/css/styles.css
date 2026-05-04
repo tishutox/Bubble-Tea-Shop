@@ -795,6 +795,10 @@ a {
 
 /* Navigation for mobile devices */
 @media screen and (max-width: 1118px) {
+  .nav__logo img {
+    height: 2.25rem;
+  }
+
   .nav__menu {
     position: absolute;
     left: 0;
