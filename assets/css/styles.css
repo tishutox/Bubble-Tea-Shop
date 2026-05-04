@@ -1654,6 +1654,11 @@ body.dark-mode {
   color: #41fa8e;
 }
 
+.dark-mode .form__captcha-refresh:hover {
+  background-color: #41fa8e;
+  color: #000;
+}
+
 /*=============== FOOTER ===============*/
 .footer {
   position: relative;

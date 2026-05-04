@@ -274,6 +274,16 @@ const initThemeToggle = () => {
 
 initThemeToggle()
 
+/*=============== CURRENT YEAR ===============*/
+const initCurrentYear = () => {
+    const year = String(new Date().getFullYear())
+    document.querySelectorAll('[data-current-year]').forEach((el) => {
+        el.textContent = year
+    })
+}
+
+initCurrentYear()
+
 /*=============== MODALS ===============*/
 const initModals = () => {
     // Open
