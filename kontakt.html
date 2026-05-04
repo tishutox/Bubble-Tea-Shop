@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--=============== REMIXICONS ===============-->
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.css" rel="stylesheet">
+
+	<!--=============== CSS ===============-->
+	<link rel="stylesheet" href="assets/css/styles.css">
+
+	<title>Pandoba Augsburg - Kontakt</title>
+</head>
+<body>
+	<!--=============== HEADER ===============-->
+	<header class="header">
+		<nav class="nav container">
+			<div class="nav__data">
+				<a href="index.html" class="nav__logo">
+					<img src="assets/img/logo.png" alt="Pandoba Logo">
+				</a>
+
+				<div class="nav__toggle" id="nav-toggle">
+					<i class="ri-menu-4-line nav__burger"></i>
+					<i class="ri-close-line nav__close"></i>
+				</div>
+			</div>
+
+			<!--=============== NAV MENU ===============-->
+			<div class="nav__menu" id="nav-menu">
+				<ul class="nav__list">
+					<li class="dropdown__item">
+						<div class="nav__link">
+							Menü <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+						</div>
+
+						<ul class="dropdown__menu">
+							<li>
+								<a href="index.html#classic-milk-tea" class="dropdown__link">
+									<i class="ri-cup-line"></i> Classic Milk Tea
+								</a>
+							</li>
+
+							<li>
+								<a href="index.html#latte" class="dropdown__link">
+									<i class="ri-drinks-line"></i> Latte
+								</a>
+							</li>
+
+							<li>
+								<a href="index.html#flavored-tea" class="dropdown__link">
+									<i class="ri-cup-line"></i> Flavored Tea
+								</a>
+							</li>
+
+							<li>
+								<a href="index.html#flavored-yoghurt" class="dropdown__link">
+									<i class="ri-cookie-line"></i> Flavored Yoghurt
+								</a>
+							</li>
+
+							<li>
+								<a href="index.html#juice-soda" class="dropdown__link">
+									<i class="ri-drinks-2-line"></i> Juice Soda
+								</a>
+							</li>
+
+							<li>
+								<a href="index.html#specials" class="dropdown__link">
+									<i class="ri-sparkling-2-line"></i> Specials
+								</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="dropdown__item">
+						<div class="nav__link">
+							Über Uns <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+						</div>
+
+						<ul class="dropdown__menu">
+							<li>
+								<a href="ueber-uns.html#geschichte" class="dropdown__link">
+									<i class="ri-history-line"></i> Geschichte
+								</a>
+							</li>
+
+							<li>
+								<a href="ueber-uns.html#bewertungen" class="dropdown__link">
+									<i class="ri-star-line"></i> Bewertungen
+								</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="dropdown__item">
+						<div class="nav__link">
+							Kontakt <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+						</div>
+
+						<ul class="dropdown__menu">
+							<li>
+								<a href="#bestellformular" class="dropdown__link">
+									<i class="ri-contacts-book-line"></i> Formular
+								</a>
+							</li>
+
+							<li>
+								<a href="#karte" class="dropdown__link">
+									<i class="ri-map-line"></i> Karte
+								</a>
+							</li>
+
+							<li>
+								<a href="#galerie" class="dropdown__link">
+									<i class="ri-gallery-line"></i> Bilder
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main class="main">
+
+		<!--=============== ORDER FORM ===============-->
+		<section class="contact-form container" id="bestellformular">
+			<h1 class="contact-form__title">Bestellformular</h1>
+			<p class="contact-form__subtitle">Stelle deine Bestellung bequem vorab zusammen &ndash; wir bereiten sie für dich vor.</p>
+
+			<form class="form" id="order-form" novalidate>
+				<div class="form__grid">
+
+					<!-- Name -->
+					<div class="form__group">
+						<label for="form-name" class="form__label">
+							Name <span class="form__required">*</span>
+						</label>
+						<input type="text" id="form-name" name="name" class="form__input"
+							placeholder="Dein Name" required>
+					</div>
+
+					<!-- E-Mail -->
+					<div class="form__group">
+						<label for="form-email" class="form__label">
+							E-Mail <span class="form__required">*</span>
+						</label>
+						<input type="email" id="form-email" name="email" class="form__input"
+							placeholder="deine@email.de" required>
+					</div>
+
+					<!-- Telefon -->
+					<div class="form__group">
+						<label for="form-phone" class="form__label">
+							Telefon <span class="form__optional">(optional)</span>
+						</label>
+						<input type="tel" id="form-phone" name="phone" class="form__input"
+							placeholder="+49 821 …">
+					</div>
+
+					<!-- Abholzeit -->
+					<div class="form__group">
+						<label for="form-pickup" class="form__label">
+							Abholzeit <span class="form__required">*</span>
+						</label>
+						<input type="datetime-local" id="form-pickup" name="pickup" class="form__input" required>
+					</div>
+
+					<!-- Getränk -->
+					<div class="form__group form__group--full">
+						<label for="form-drink" class="form__label">
+							Getränk <span class="form__required">*</span>
+						</label>
+						<select id="form-drink" name="drink" class="form__select" required>
+							<option value="" disabled selected>Bitte wählen …</option>
+							<optgroup label="Classic Milk Tea">
+								<option value="taro-milk-tea">Taro Milk Tea</option>
+								<option value="matcha-milk-tea">Matcha Milk Tea</option>
+								<option value="brown-sugar-milk-tea">Brown Sugar Milk Tea</option>
+							</optgroup>
+							<optgroup label="Latte">
+								<option value="matcha-latte">Matcha Latte</option>
+								<option value="taro-latte">Taro Latte</option>
+							</optgroup>
+							<optgroup label="Flavored Tea">
+								<option value="mango-green-tea">Mango Green Tea</option>
+								<option value="lychee-green-tea">Lychee Green Tea</option>
+								<option value="passion-fruit-tea">Passion Fruit Tea</option>
+							</optgroup>
+							<optgroup label="Flavored Yoghurt">
+								<option value="strawberry-yoghurt">Strawberry Yoghurt</option>
+								<option value="peach-yoghurt">Peach Yoghurt</option>
+							</optgroup>
+							<optgroup label="Juice Soda">
+								<option value="lemon-soda">Lemon Soda</option>
+								<option value="watermelon-soda">Watermelon Soda</option>
+							</optgroup>
+							<optgroup label="Specials">
+								<option value="special-of-the-day">Special of the Day</option>
+							</optgroup>
+						</select>
+					</div>
+
+					<!-- Größe -->
+					<div class="form__group">
+						<span class="form__label">Größe <span class="form__required">*</span></span>
+						<div class="form__radio-group">
+							<label class="form__radio-label">
+								<input type="radio" name="size" value="M" class="form__radio" checked>
+								<span>M</span>
+							</label>
+							<label class="form__radio-label">
+								<input type="radio" name="size" value="L" class="form__radio">
+								<span>L</span>
+							</label>
+						</div>
+					</div>
+
+					<!-- Zuckergehalt -->
+					<div class="form__group">
+						<label for="form-sugar" class="form__label">Zuckergehalt</label>
+						<select id="form-sugar" name="sugar" class="form__select">
+							<option value="0">0 % &ndash; kein Zucker</option>
+							<option value="25">25 % &ndash; wenig süß</option>
+							<option value="50" selected>50 % &ndash; normal</option>
+							<option value="75">75 % &ndash; süßer</option>
+							<option value="100">100 % &ndash; sehr süß</option>
+						</select>
+					</div>
+
+					<!-- Eisgehalt -->
+					<div class="form__group">
+						<label for="form-ice" class="form__label">Eisgehalt</label>
+						<select id="form-ice" name="ice" class="form__select">
+							<option value="no-ice">Kein Eis</option>
+							<option value="less-ice">Wenig Eis</option>
+							<option value="normal-ice" selected>Normal</option>
+							<option value="extra-ice">Extra Eis</option>
+						</select>
+					</div>
+
+					<!-- Toppings -->
+					<div class="form__group form__group--full">
+						<span class="form__label">Toppings</span>
+						<div class="form__checkbox-group">
+							<label class="form__checkbox-label">
+								<input type="checkbox" name="toppings" value="tapioka" class="form__checkbox">
+								<span>Tapioka-Perlen</span>
+							</label>
+							<label class="form__checkbox-label">
+								<input type="checkbox" name="toppings" value="popping-boba" class="form__checkbox">
+								<span>Popping Boba</span>
+							</label>
+							<label class="form__checkbox-label">
+								<input type="checkbox" name="toppings" value="aloe-vera" class="form__checkbox">
+								<span>Aloe Vera</span>
+							</label>
+							<label class="form__checkbox-label">
+								<input type="checkbox" name="toppings" value="pudding" class="form__checkbox">
+								<span>Pudding</span>
+							</label>
+							<label class="form__checkbox-label">
+								<input type="checkbox" name="toppings" value="konjak-gelee" class="form__checkbox">
+								<span>Konjak-Gelee</span>
+							</label>
+							<label class="form__checkbox-label">
+								<input type="checkbox" name="toppings" value="kokos-gelee" class="form__checkbox">
+								<span>Kokosnuss-Gelee</span>
+							</label>
+						</div>
+					</div>
+
+					<!-- Anmerkungen -->
+					<div class="form__group form__group--full">
+						<label for="form-notes" class="form__label">Anmerkungen</label>
+						<textarea id="form-notes" name="notes" class="form__textarea" rows="3"
+							placeholder="Weitere Wünsche oder Allergiehinweise …"></textarea>
+					</div>
+
+					<!-- CAPTCHA -->
+					<div class="form__group form__group--full">
+						<span class="form__label">Spam-Schutz <span class="form__required">*</span></span>
+						<div class="form__captcha">
+							<canvas id="captcha-canvas" class="form__captcha-canvas" width="180" height="52"
+								aria-label="Sicherheitscode als Bild"></canvas>
+							<button type="button" id="captcha-refresh" class="form__captcha-refresh"
+								aria-label="Code neu generieren" title="Neuen Code generieren">
+								<i class="ri-refresh-line"></i>
+							</button>
+						</div>
+						<input type="text" id="form-captcha" name="captcha" class="form__input form__input--captcha"
+							placeholder="Code aus dem Bild eingeben …" required autocomplete="off"
+							maxlength="6" spellcheck="false">
+					</div>
+
+				</div><!-- /.form__grid -->
+
+				<button type="submit" class="form__submit">
+					<i class="ri-send-plane-line"></i> Bestellung abschicken
+				</button>
+
+				<p class="form__status" id="form-status" role="alert" aria-live="polite"></p>
+			</form>
+		</section>
+
+		<!--=============== MAP ===============-->
+		<section class="contact-map" id="karte">
+			<div class="contact-map__inner container">
+				<h2 class="contact-map__title">Wo wir sind</h2>
+				<p class="contact-map__address">
+					<i class="ri-map-pin-line"></i> Annastraße 5, 86150 Augsburg
+				</p>
+				<iframe
+					class="contact-map__iframe"
+					src="https://maps.google.com/maps?q=Annastra%C3%9Fe+5%2C+86150+Augsburg%2C+Deutschland&hl=de&output=embed"
+					width="100%"
+					height="420"
+					style="border:0;"
+					allowfullscreen=""
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+					title="Standort Pandoba Augsburg – Annastraße 5, 86150 Augsburg"
+				></iframe>
+			</div>
+		</section>
+
+		<!--=============== GALLERY ===============-->
+		<section class="contact-gallery container" id="galerie">
+			<h2 class="contact-gallery__title">Einblicke</h2>
+			<div class="contact-gallery__grid">
+				<figure class="contact-gallery__item">
+					<img src="assets/img/shop.png" alt="Pandoba Shop Einblick 1" class="contact-gallery__img" loading="lazy">
+				</figure>
+				<figure class="contact-gallery__item">
+					<img src="assets/img/shop.png" alt="Pandoba Shop Einblick 2" class="contact-gallery__img" loading="lazy">
+				</figure>
+				<figure class="contact-gallery__item">
+					<img src="assets/img/shop.png" alt="Pandoba Shop Einblick 3" class="contact-gallery__img" loading="lazy">
+				</figure>
+				<figure class="contact-gallery__item">
+					<img src="assets/img/shop.png" alt="Pandoba Shop Einblick 4" class="contact-gallery__img" loading="lazy">
+				</figure>
+				<figure class="contact-gallery__item">
+					<img src="assets/img/shop.png" alt="Pandoba Shop Einblick 5" class="contact-gallery__img" loading="lazy">
+				</figure>
+				<figure class="contact-gallery__item">
+					<img src="assets/img/shop.png" alt="Pandoba Shop Einblick 6" class="contact-gallery__img" loading="lazy">
+				</figure>
+				<figure class="contact-gallery__item">
+					<img src="assets/img/shop.png" alt="Pandoba Shop Einblick 7" class="contact-gallery__img" loading="lazy">
+				</figure>
+				<figure class="contact-gallery__item">
+					<img src="assets/img/shop.png" alt="Pandoba Shop Einblick 8" class="contact-gallery__img" loading="lazy">
+				</figure>
+			</div>
+		</section>
+
+	</main>
+
+	<!--=============== FOOTER ===============-->
+	<footer class="footer">
+		<div class="footer__content container">
+			<div class="footer__section" id="kontaktinformationen">
+				<h3 class="footer__title">Kontaktinformationen</h3>
+				<p class="footer__text">
+					Pandoba Augsburg<br>
+					Annastr. 5<br>
+					86150 Augsburg (Innenstadt)<br>
+				</p>
+				<div class="footer__social" aria-label="Social Media Links">
+					<a href="https://www.facebook.com" class="footer__social-link" aria-label="Facebook">
+						<i class="ri-facebook-line"></i>
+					</a>
+					<a href="https://www.instagram.com" class="footer__social-link" aria-label="Instagram">
+						<i class="ri-instagram-line"></i>
+					</a>
+					<a href="https://github.com/tishutox/Bubble-Tea-Shop" class="footer__social-link" aria-label="GitHub">
+						<i class="ri-github-line"></i>
+					</a>
+				</div>
+			</div>
+
+			<div class="footer__section" id="oeffnungszeiten">
+				<h3 class="footer__title">Öffnungszeiten</h3>
+				<div class="footer__hours">
+					<div class="footer__hours-col">
+						<p class="footer__text">Montag</p>
+						<p class="footer__text">Dienstag</p>
+						<p class="footer__text">Mittwoch</p>
+						<p class="footer__text">Donnerstag</p>
+						<p class="footer__text">Freitag</p>
+						<p class="footer__text">Samstag</p>
+						<p class="footer__text">Sonntag</p>
+					</div>
+					<div class="footer__hours-col">
+						<p class="footer__text">11:30 - 19:30</p>
+						<p class="footer__text">11:30 - 19:30</p>
+						<p class="footer__text">11:30 - 19:30</p>
+						<p class="footer__text">11:30 - 19:30</p>
+						<p class="footer__text">11:30 - 19:30</p>
+						<p class="footer__text">11:30 - 17:30</p>
+						<p class="footer__text">Geschlossen</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!--=============== MAIN JS ===============-->
+	<script src="assets/js/main.js"></script>
+</body>
+</html>

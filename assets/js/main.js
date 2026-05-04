@@ -134,3 +134,108 @@ const enhanceReviewCards = () => {
 }
 
 enhanceReviewCards()
+
+/*=============== CAPTCHA ===============*/
+const initCaptcha = () => {
+    const canvas = document.getElementById('captcha-canvas')
+    if (!canvas) return
+
+    const ctx = canvas.getContext('2d')
+    const CHARS = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789'
+    let currentCode = ''
+
+    const generateCode = () => {
+        currentCode = Array.from({ length: 6 }, () =>
+            CHARS[Math.floor(Math.random() * CHARS.length)]
+        ).join('')
+        drawCanvas(currentCode)
+    }
+
+    const drawCanvas = (code) => {
+        const w = canvas.width
+        const h = canvas.height
+
+        ctx.clearRect(0, 0, w, h)
+
+        // Background
+        ctx.fillStyle = '#111827'
+        ctx.fillRect(0, 0, w, h)
+
+        // Noise lines
+        for (let i = 0; i < 6; i++) {
+            ctx.beginPath()
+            ctx.moveTo(Math.random() * w, Math.random() * h)
+            ctx.lineTo(Math.random() * w, Math.random() * h)
+            ctx.strokeStyle = `rgba(65, 250, 142, ${0.15 + Math.random() * 0.25})`
+            ctx.lineWidth = 1
+            ctx.stroke()
+        }
+
+        // Noise dots
+        for (let i = 0; i < 50; i++) {
+            ctx.beginPath()
+            ctx.arc(Math.random() * w, Math.random() * h, 1, 0, Math.PI * 2)
+            ctx.fillStyle = `rgba(255, 255, 255, ${0.08 + Math.random() * 0.2})`
+            ctx.fill()
+        }
+
+        // Characters
+        const charSlot = w / (code.length + 1)
+        for (let i = 0; i < code.length; i++) {
+            ctx.save()
+            ctx.translate(charSlot * (i + 0.8), h / 2 + 4)
+            ctx.rotate((Math.random() - 0.5) * 0.55)
+            const size = 20 + Math.floor(Math.random() * 5)
+            ctx.font = `bold ${size}px Montserrat, sans-serif`
+            ctx.fillStyle = `hsl(${140 + Math.floor(Math.random() * 20)}, 95%, ${65 + Math.floor(Math.random() * 15)}%)`
+            ctx.textAlign = 'center'
+            ctx.textBaseline = 'middle'
+            ctx.fillText(code[i], 0, 0)
+            ctx.restore()
+        }
+    }
+
+    // Refresh button
+    const refreshBtn = document.getElementById('captcha-refresh')
+    if (refreshBtn) {
+        refreshBtn.addEventListener('click', () => {
+            generateCode()
+            const input = document.getElementById('form-captcha')
+            if (input) {
+                input.value = ''
+                input.focus()
+            }
+        })
+    }
+
+    // Form submit validation
+    const form = document.getElementById('order-form')
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault()
+            const captchaInput = document.getElementById('form-captcha')
+            const statusEl = document.getElementById('form-status')
+
+            if (!captchaInput || !statusEl) return
+
+            if (captchaInput.value.trim().toLowerCase() !== currentCode.toLowerCase()) {
+                statusEl.textContent = 'Sicherheitscode falsch. Bitte erneut versuchen.'
+                statusEl.className = 'form__status form__status--error'
+                generateCode()
+                captchaInput.value = ''
+                captchaInput.focus()
+                return
+            }
+
+            // Simulate successful submission
+            statusEl.textContent = 'Deine Bestellung wurde erfolgreich übermittelt. Wir melden uns bald bei dir!'
+            statusEl.className = 'form__status form__status--success'
+            form.reset()
+            generateCode()
+        })
+    }
+
+    generateCode()
+}
+
+initCaptcha()
