@@ -1692,9 +1692,17 @@ body.dark-mode {
   white-space: nowrap;
 }
 
+.footer__hours-col:last-child {
+  align-items: flex-end;
+}
+
 .footer__hours-col .footer__text {
   line-height: 1.7;
   margin: 0;
+}
+
+.footer__hours-col:last-child .footer__text {
+  text-align: right;
 }
 
 .footer__title {
@@ -1738,6 +1746,19 @@ body.dark-mode {
 .footer__social-link:hover {
   opacity: .8;
   transform: translateY(-2px);
+}
+
+@media screen and (max-width: 767px) {
+  .footer__section {
+    width: fit-content;
+    margin-inline: auto;
+    justify-items: start;
+  }
+
+  .footer__legal {
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 768px) {
