@@ -273,3 +273,46 @@ const initThemeToggle = () => {
 }
 
 initThemeToggle()
+
+/*=============== MODALS ===============*/
+const initModals = () => {
+    // Open
+    document.querySelectorAll('[data-modal-open]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const target = document.getElementById(btn.dataset.modalOpen)
+            if (!target) return
+            target.classList.add('is-open')
+            document.body.style.overflow = 'hidden'
+            // Focus the close button for accessibility
+            const closeBtn = target.querySelector('[data-modal-close]')
+            if (closeBtn) closeBtn.focus()
+        })
+    })
+
+    // Close via close button or backdrop click
+    document.querySelectorAll('.modal-overlay').forEach((overlay) => {
+        const closeModal = () => {
+            overlay.classList.remove('is-open')
+            document.body.style.overflow = ''
+        }
+
+        overlay.querySelectorAll('[data-modal-close]').forEach((btn) => {
+            btn.addEventListener('click', closeModal)
+        })
+
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) closeModal()
+        })
+    })
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key !== 'Escape') return
+        document.querySelectorAll('.modal-overlay.is-open').forEach((overlay) => {
+            overlay.classList.remove('is-open')
+            document.body.style.overflow = ''
+        })
+    })
+}
+
+initModals()
