@@ -775,6 +775,11 @@ a {
   transform: rotate(18deg);
 }
 
+/* Desktop toggle lives in nav__list; mobile toggle lives in nav__actions */
+.nav__theme-li {
+  display: none;
+}
+
 .nav__logo {
   display: inline-flex;
   align-items: center;
@@ -1758,6 +1763,13 @@ body.dark-mode {
     justify-content: space-between;
   }
   .nav__toggle {
+    display: none;
+  }
+  .nav__theme-li {
+    display: flex;
+    align-items: center;
+  }
+  .nav__actions .nav__theme-toggle {
     display: none;
   }
   .nav__list {

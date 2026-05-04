@@ -242,23 +242,33 @@ initCaptcha()
 
 /*=============== THEME TOGGLE ===============*/
 const initThemeToggle = () => {
-    const btn = document.getElementById('theme-toggle')
-    if (!btn) return
+    const btns = document.querySelectorAll('.nav__theme-toggle')
+    if (!btns.length) return
 
-    const icon = btn.querySelector('i')
     const DARK_CLASS = 'dark-mode'
     const STORAGE_KEY = 'pandoba-theme'
+    const ICON_DARK = 'ri-sun-line'
+    const ICON_LIGHT = 'ri-moon-clear-line'
+
+    const updateIcons = (isDark) => {
+        btns.forEach(btn => {
+            const icon = btn.querySelector('i')
+            if (icon) icon.className = isDark ? ICON_DARK : ICON_LIGHT
+        })
+    }
 
     // Apply saved preference on load
     if (localStorage.getItem(STORAGE_KEY) === 'dark') {
         document.body.classList.add(DARK_CLASS)
-        icon.className = 'ri-sun-line'
+        updateIcons(true)
     }
 
-    btn.addEventListener('click', () => {
-        const isDark = document.body.classList.toggle(DARK_CLASS)
-        icon.className = isDark ? 'ri-sun-line' : 'ri-moon-clear-line'
-        localStorage.setItem(STORAGE_KEY, isDark ? 'dark' : 'light')
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const isDark = document.body.classList.toggle(DARK_CLASS)
+            updateIcons(isDark)
+            localStorage.setItem(STORAGE_KEY, isDark ? 'dark' : 'light')
+        })
     })
 }
 
