@@ -530,6 +530,43 @@
 		</div>
 	</div>
 
+	<button class="cookie-consent-trigger" type="button" data-modal-open="modal-cookies" aria-label="Cookie-Einstellungen öffnen">
+		<i class="ri-cookie-line" aria-hidden="true"></i>
+		<span>Cookies</span>
+	</button>
+
+	<!--=============== MODAL: COOKIE-HINWEISE ===============-->
+	<div class="modal-overlay" id="modal-cookies" role="dialog" aria-modal="true" aria-labelledby="cookies-title">
+		<div class="modal">
+			<div class="modal__header">
+				<h2 class="modal__title" id="cookies-title">
+					<i class="ri-cookie-line" aria-hidden="true"></i> Cookie-Hinweise
+				</h2>
+				<button class="modal__close" aria-label="Schließen" data-modal-close>
+					<i class="ri-close-line" aria-hidden="true"></i>
+				</button>
+			</div>
+			<div class="modal__body">
+				<div class="modal__notice">
+					<i class="ri-information-2-line" aria-hidden="true"></i>
+					<p>Wir halten den Einsatz von Cookies auf dieser Website bewusst schlank. In diesem Fenster finden Sie transparent zusammengefasst, was gesetzt wird und warum.</p>
+				</div>
+
+				<h3>Welche Cookies verwenden wir?</h3>
+				<ul>
+					<li><strong>Funktionale Speicherung (localStorage):</strong> Nur Ihre Theme-Auswahl (Dark / Light Mode), damit die Seite beim nächsten Besuch gleich aussieht.</li>
+					<li><strong>Keine Tracking- oder Marketing-Cookies:</strong> Es werden keine Werbeprofile erstellt und kein Verhalten zu Marketingzwecken verfolgt.</li>
+				</ul>
+
+				<h3>Externe Inhalte</h3>
+				<p>Externe Dienste wie Google Fonts und jsDelivr (Remix Icons) können technisch bedingt Verbindungsdaten wie die IP-Adresse verarbeiten. Details finden Sie in der Datenschutzerklärung.</p>
+
+				<h3>Ihre Kontrolle</h3>
+				<p>Sie können gespeicherte Website-Daten jederzeit über Ihre Browser-Einstellungen löschen. Danach wird auch die gespeicherte Theme-Auswahl zurückgesetzt.</p>
+			</div>
+		</div>
+	</div>
+
 	<!--=============== MAIN JS ===============-->
 	<script src="assets/js/main.js"></script>
 </body>
