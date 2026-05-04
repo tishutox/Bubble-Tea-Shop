@@ -1646,6 +1646,14 @@ body.dark-mode {
   color: hsl(220, 10%, 45%);
 }
 
+.dark-mode .form__submit {
+  color: #000;
+}
+
+.dark-mode .form__captcha-refresh {
+  color: #41fa8e;
+}
+
 /*=============== FOOTER ===============*/
 .footer {
   position: relative;
